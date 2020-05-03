@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+        <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Free singlepage web template created by GraphBerry">
+    <meta name="keywords" content="HTML5, Bootstrap 3, CSS3, javascript, PHP, Responsive, Mobile">
+    <meta name="author" content="GraphBerry.com"/>
+    <!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400" rel="stylesheet">
+    <!-- Styles -->
+    <link rel="stylesheet" type="text/css" href="../../static/css/yellowmoon-font.css">
+    <link rel="stylesheet" type="text/css" href="../../static/css/style.css">
+</head>
+<body>
+{% include 'common/top.html' %}
+	<section id="about" class="about">
+
+		<div class="container">
+
+			<div class="row">
+
+				<div class="col-md-8 col-md-offset-2">
+
+					<!-- Section title -->
+					<h2 class="title -black">About us</h2>
+
+					<span class="subtitle h3 -yellow">Yellow side of the moon is not secret anymore</span>
+
+				</div>
+
+			</div> <!-- /.row -->
+
+			<div class="row box-container">
+
+				<form class="form-horizontal col-md-offset-4" action="{{ url_for('user.login')}}" method="post">
+
+					{% if model != null%}
+					<p class="desc">
+						{{model.message}}
+					</p>
+					{% endif %}
+					<div class="form-group">
+						<lable for="exampleInputEmail1" class="col-md-3 ">
+							<h3 class="title -one -black">用户名</h3>
+						</lable>
+						<div class="col-md-4">
+							<input type="text" class="form-control" id="exampleInputEmail1" placeholder="账号" name="username">
+						</div>
+					</div>
+					<div class="form-group">
+						<lable for="exampleInputEmail1" class="col-md-3">
+							<h3 class="title -one -black">密码</h3>
+						</lable>
+						<div class="col-md-4">
+							<input type="password" class="form-control" id="exampleInputPass1" placeholder="密码" name="password">
+						</div>
+					</div>
+					<button class="brn btn-default sumitButton col-md-offset-3" type="submit">
+						提交
+					</button>
+
+<!--						<table>-->
+<!--							<tr>-->
+<!--								<td><h3 class="title -one -black">用户名</h3></td>-->
+<!--								<td><input class="title -one -black" type="text" name = 'username'/> </td>-->
+<!--							</tr>-->
+<!--							<tr>-->
+<!--								<td><h3 class="title -one -black">密码</h3></td>-->
+<!--								<td><input class="title -one -black" type="password" name = 'password'/> </td>-->
+<!--							</tr>-->
+<!--							<tr>-->
+<!--								<td><input type="submit" value="登录"></td>-->
+<!--							</tr>-->
+<!--						</table>-->
+				</form>
+
+					<div class="col-sm-4 col-sm-offset-4 ">
+
+						<div class="about-box">
+							<a href="{{url_for('user.register_form')}}">
+							<h3 class="title -one -black">Register</h3>
+							</a>
+							<p class="desc">Don't have an account</p>
+
+						</div> <!-- /.about-box -->
+
+					</div>
+
+
+
+					</div> <!-- /.about-box -->
+
+				</form>
+
+
+
+			</div> <!-- /.row -->
+
+		</div> <!-- /.box-container -->
+
+	</section> <!-- /.about -->
+
+
+</body>
+</html>

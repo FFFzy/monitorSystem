@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+        <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Free singlepage web template created by GraphBerry">
+    <meta name="keywords" content="HTML5, Bootstrap 3, CSS3, javascript, PHP, Responsive, Mobile">
+    <meta name="author" content="GraphBerry.com"/>
+    <!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400" rel="stylesheet">
+    <!-- Styles -->
+    <link rel="stylesheet" type="text/css" href="../../static/css/yellowmoon-font.css">
+    <link rel="stylesheet" type="text/css" href="../../static/css/style.css">
+</head>
+<body>
+  	<section id="home" class="home">
+
+			<!-- Section title -->
+			<h2 class="sr-only">Home</h2>
+
+			<div class="l-align-both">
+
+				<figure class="logo">
+					<img src="../../img/logo/yellowmoon_logo_01.svg" title="YellowMoon Logo" alt="Cartoon illustration of the moon">
+					<figcaption class="sr-only">YellowMoon Logo</figcaption>
+				</figure>
+
+				<span class="h3 -white">Welcome to the  yellow side of moon</span>
+
+				<span class="h1 -yellow">We do some creative stuff!!!</span>
+
+				<a href="{{ url_for('monitor.main')}}" class="button">Explore</a>
+
+				<a href="{{ url_for('monitor.main')}}" class="chevron-down smoothScroll">
+					<img class="icon" src="img/chevron_down_white.svg" title="Scroll down" alt="Chevron pointing downwards">
+					<span class="sr-only">Scroll down</span>
+				</a>
+
+			</div>
+
+		</section> <!-- /.home -->
+
+<object type='application/x-vlc-plugin' id='vlc' events='True' width="720" height="540" pluginspage="http://www.videolan.org" codebase="http://downloads.videolan.org/pub/videolan/vlc-webplugins/2.0.6/npapi-vlc-2.0.6.tar.xz">
+                <param name='mrl' value='http://192.168.0.100:8090' />
+                <param name='volume' value='50' />
+                <param name='autoplay' value='true' />
+                <param name="toolbar" value="true" />
+                <param name='loop' value='true' />
+                <param name='fullscreen' value='true' />
+            </object>
+
+</body>
+</html>

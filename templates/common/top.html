@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+        <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Free singlepage web template created by GraphBerry">
+    <meta name="keywords" content="HTML5, Bootstrap 3, CSS3, javascript, PHP, Responsive, Mobile">
+    <meta name="author" content="GraphBerry.com"/>
+    <!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400" rel="stylesheet">
+    <!-- Styles -->
+    <link rel="stylesheet" type="text/css" href="../../static/css/yellowmoon-font.css">
+    <link rel="stylesheet" type="text/css" href="../../static/css/style.css">
+</head>
+<body>
+    <div class="nav-container">
+
+        <nav id="main-navigation" class="navbar navbar-default">
+          <!-- Section title -->
+          <h2 class="sr-only">Main navigation</h2>
+
+          <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar" aria-expanded="false">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="sr-only">Toggle navigation</span>
+              </button>
+              <a class="navbar-brand smoothScroll" href="#home">
+                <img class="logo" src="../../img/logo/yellowmoon_logo_02.svg" title="YellowMoon Logo" alt="Cartoon illustration of the moon and brand title">
+                <span class="sr-only">YellowMoon Logo</span>
+              </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div id="main-navbar" class="collapse navbar-collapse">
+
+                <ul class="nav navbar-nav navbar-right">
+
+                    <li class="active"><a class="smoothScroll" href="#home">Home <span class="sr-only">(current)</span></a></li>
+                    {% if session.user != null%}
+                    <li><a class="smoothScroll" href="{{ url_for('user.login_form')}}">Log in</a></li>
+                    <li><a class="smoothScroll" href="{{ url_for('user.login_form')}}">MyInfo</a></li>
+                    <li><a class="smoothScroll" href="{{ url_for('user.login_form')}}">Clients</a></li>
+                    <li><a class="smoothScroll" href="{{ url_for('user.login_form')}}">Contact</a></li>
+					{% else %}
+                    <li><a class="smoothScroll" href="{{ url_for('user.login_form')}}">Log in</a></li>
+                    <li><a class="smoothScroll" href="{{ url_for('user.login_form')}}">MyInfo</a></li>
+                    <li><a class="smoothScroll" href="{{ url_for('user.login_form')}}">Clients</a></li>
+                    <li><a class="smoothScroll" href="{{ url_for('user.login_form')}}">Contact</a></li>
+					{% endif %}
+
+                </ul>
+
+            </div> <!-- /.navbar-collapse -->
+
+          </div> <!-- /.container -->
+
+        </nav> <!-- /.navbar -->
+
+    </div> <!-- /.nav-container -->
+
+</body>
+</html>
